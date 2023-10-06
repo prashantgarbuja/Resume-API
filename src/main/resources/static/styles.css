@@ -1,0 +1,175 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;700&display=swap');   :root{
+        --bg: #F9F3CC;
+        --art: #FFFFFF;
+        --code: #8EACCD;
+        --btn: #79155B;
+        --marker: #79155B;
+    }
+    *{
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        font-family: 'Fira Code', monospace;
+    }
+
+    body{
+        background-color: var(--bg);
+    }
+
+    section{
+        max-width: 900px;
+        width: 95%;
+        margin: 2rem auto;
+    }
+
+    article{
+        padding: 2rem;
+        background-color: var(--art);
+        margin: 2rem auto;
+    }
+    
+    li{
+        margin: 2rem 0rem 2rem 3rem;
+    }
+
+    li::marker{
+        color: var(--marker);
+        font-weight: 700;
+    }
+
+
+    code, .code{
+        display: inline-block;
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        padding: 0.75rem;
+        margin: 1rem auto;
+        background-color: var(--code);
+        font-size: 0.85rem;
+        /* min-height: 100px; */
+        align-items: flex-end;
+        color: #FFFFFF;
+
+    }
+
+
+    .btn, button{
+        height: 100%;
+        border: none;
+        padding: .12rem 1rem .12rem 1rem;
+        background-color: var(--btn);
+        color: var(--art);
+    }
+
+    button:hover{
+        cursor: copy;
+    }
+
+    button:focus{
+        opacity: 0.9;
+        border: 1px solid var(--art);
+        background-color: var(--marker);
+    }
+
+    h1, h2, h3, h4{
+		text-align: center;
+        font-size: 2rem;
+        margin-bottom: 1.2rem;
+    }
+
+    .text{
+        line-height: 1.5rem;
+    }
+
+    button{
+        background-color: var(--marker);
+        padding: .2rem;
+    }
+
+    @media only screen and (max-width: 800px) {
+        section{
+            width: calc(100% - 1rem);
+            margin: 0 auto;
+        }
+
+        code, .code{
+            overflow-wrap: break-word;
+            width: 100%;
+            font-size: 0.9rem;
+            flex-wrap: wrap;
+            overflow: auto;
+        }
+
+        article{
+            padding: 1rem;
+            margin: 1rem 0;
+            overflow: auto;
+        }
+
+        button{
+            margin-top: 1rem;
+        }
+
+
+        pre{
+            overflow: auto;
+        }
+
+li{
+    margin: 1rem;
+}
+}
+
+.note{
+    padding: .25rem 1rem .25rem 1rem;
+        background-color: var(--btn);
+        color: var(--art);
+}
+
+	.button {
+        position: relative;
+        display: inline-block;
+        cursor: pointer;
+    }
+    .button:before,
+    .button:after {
+        content: 'Copy Text';
+        position: absolute;
+        top: 40px;
+        left: -37px;
+        width: 114px;
+        height: 36px;
+        color: #fff;
+        font-size: 10px;
+        line-height: 36px;
+        text-align: center;
+        background: rgba(0, 0, 0, .72);
+        border-radius: 3px;
+        display: none;
+    }
+
+    .button:before {
+        top: 35px;
+        left: 15px;
+        width: 0;
+        height: 0;
+        border-left: 5px solid transparent;
+        border-right: 5px solid transparent;
+        border-bottom: 5px solid rgba(0, 0, 0, .72);
+    }
+
+    .button:hover:before,
+    .button:hover:after {
+        display: block;
+    }
+
+    .button:active,
+    .button:focus {
+        outline: none;
+    }
+
+    .button:active:after,
+    .button:focus:after {
+        content: 'Copied!';
+    }

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prashant Garbuja API Resume</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">  
+</head>
+<body>
+    <section>
+            <article>
+                <h1>Prashant Garbuja Resume API</h1><span class="text"> - Lets make a REST API Call to my Resume API</span>
+            </article>
+            <article>    
+                <h2>Table of Contents</h2>
+                <ol>
+                    <li>
+                        <a href="#curl">cURL</a>
+                    </li>
+                    <li>
+                        <a href="#apiclient">API Client</a>
+                    </li>
+                    <li>
+                        <a href="#endpoints">Endpoints</a>
+                    </li>
+                    <li>
+                        <a href="#contact">Contact</a>
+                    </li>
+                </ol>
+            </article>
+
+            <article id="curl">
+                <h2>Using cURL</h2>
+                <p class="text"><a target="_blank" href="https://github.com/curl/curl">cURL</a> is a versatile command-line tool for making requests to remote servers. It's a quick way to access my API resume.</p>
+                <ol>
+                    <li><p class="text">Make sure cURL is installed on your machine. Run: <span class="code">curl --version<button class="button" data-text="curl --version" >Copy text</button></span></p><br><p>You should see some output information about the version of cURL installed on your machine. If you get a message indicating you do not have cURL installed, you may download and install <a target="_blank" href="https://curl.se/download.html">cURL</a> or use another method to view my API resume.</p></li>
+                    <li><p class="text">Once you have verified that cURL is installed, execute the following code in the command line: <br><code>curl -k http://localhost:8080/api <button class="button" data-text="curl -k http://localhost:8080/api" >Copy text</button></code></p></li>
+                    <li><p class="text">The /api endpoint will list the available endpoints for you, or you can explore them <a href="#endpoints">here</a>.</p></li>
+                </ol>
+            </article>
+            <article id="apiclient">
+                <h2>Using an API client</h2>
+                <p class="text">API clients like <a target="_blank" href="https://www.postman.com/l">Postman</a> and <a target="_blank" href="https://insomnia.rest/">Insomnia</a> provide a visual interface to interact with APIs, making it easy to test endpoints. This is the recommended method to view my API resume.</p>
+                <ol>
+                    <li class="text"><p class="text">Download and install your preferred API client (e.g., Postman).</p></li>
+                    <li><p class="text">Create a new workspace and navigate to make an HTTP request.</p></li>
+                <li><p class="text">Select <span class="btn">GET</span> and enter the request URL:<span class="code">http://localhost:8080/api<button class="button" data-text="http://localhost:8080/api">Copy Text</button></span>Click <span class="btn">Send</span></p></li>
+                <li><p class="text">View the response JSON in your API client. The /api endpoint will list the available endpoints for you, or you can explore them <a href="#endpoints">here</a>.</p></li>
+                </ol>
+            </article>
+            <article id="endpoints">
+                <h3>Endpoints</h3>
+                <p class="text">Once you're set up with cURL or an API client, you can explore my API resume using various endpoints. Endpoints are different URLs where you can make <span class="btn">GET</span> requests to view the different parts of my resume.</p><br><p class="text">See the available endpoints below:</p>
+                <ol>
+                    <li>
+                        <strong>Index:</strong> Lists all available routes.<span class="code">http://localhost:8080/api<button class="button" data-text="http://localhost:8080/api" >Copy text</button></span>
+                    </li>
+                    <li>
+                        <strong>Resume:</strong> View Full Resume<span class="code">http://localhost:8080/api/resume<button class="button" data-text="http://localhost:8080/api/resume" >Copy text</button></span>
+                    </li>
+                    <li>
+                        <strong>About me:</strong> Know about me here.<span class="code">http://localhost:8080/api/me<button class="button" data-text="http://localhost:8080/api/me" >Copy text</button></span>
+                    </li>
+                    <li>
+                        <strong>Projects:</strong> View information about the projects I've built.<span class="code">http://localhost:8080/api/projects<button class="button" data-text="http://localhost:8080/api/projects" >Copy text</button></span>
+                    </li>
+                    <li>
+                        <strong>Education:</strong> View my educational background.<span class="code">http://localhost:8080/api/education<button class="button" data-text="http://localhost:8080/api/education" >Copy text</button></span>
+                    </li>
+                    <li>
+                        <strong>Experience:</strong> Read about my previous career experience.<span class="code">http://localhost:8080/api/experience<button class="button" data-text="http://localhost:8080/api/experience" >Copy text</button></span>
+                    </li>
+                    <li>
+                        <strong>Contact:</strong> View my preferred contact information. <span class="code">http://localhost:8080/api/contact<button class="button" data-text="http://localhost:8080/api/contact" >Copy text</button></span></br>
+						<span class="note">NOTE:</span> Only Get request can be performed.
+                    </li>
+                </ol>
+            </article>
+    </section>
+
+<section>
+    <article id="contact">
+        <h4>Contact</h4>
+        <p class="text">Thank you for exploring my API resume. For inquiries, feel free to email me at <a href="mailto:prashantmaha2@gmail.com">prashantmaha2@gmail.com</a>. You can also find me on <a href="https://github.com/prashantgarbuja" target="_blank"><i class="fa-brands fa-github"></i></a>, <a href="https://www.linkedin.com/in/prashant-garbuja/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>, or <a href="https://twitter.com/garbuja_p" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>.</p>
+    </article>
+</section>
+</body>
+</html>
+
+<script>
+const buttons = document.getElementsByClassName('button');
+for (let i = 0; i < buttons.length; i++){
+    buttons[i].addEventListener('click', (e) => {
+        const copyText = e.target.dataset.text
+        navigator.clipboard.writeText(copyText)
+    })
+}
+</script>
