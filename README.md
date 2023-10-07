@@ -10,6 +10,12 @@ The Resume API is built using Java Spring, JPA, Thymeleaf, Hibernate, and Supaba
 
 For detailed information on how to use the API, please refer to the [API Documentation](https://api.prashantgarbuja.com).
 
+
+You can also explore my Swagger OpenAPI documentation.
+
+- **Swagger UI:** [Swagger UI Documentation](https://api.prashantgarbuja.com/swagger-ui-resumeapi.html)
+
+
 ## Tech Stack
 
 - Java 17
@@ -18,6 +24,7 @@ For detailed information on how to use the API, please refer to the [API Documen
 - Thymeleaf
 - Hibernate
 - [Supabase](https://supabase.com/) (Postgres)
+- Swagger OpenAPI
 
 ## How to Run
 
